@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <h2>Curso</h2>
+                    <div class="col">
+                        <h2>ID: {{course.id}}</h2>
+    
+                    </div>
+                    <div class="col">
+                        <h2>Nombre: {{course.name}}</h2>
+    
+                    </div>
+                    
+                
+            </div>
+        </div>
+   
+
+
+        <div class=" card my-2 mx-3">
+            <table class="table table-primary table-striped">
+                <thead>
+                    <th>IDENTIFICACIÓN</th>
+                    <th>NAME</th>
+                    <th>SURNAME</th>
+                </thead>
+                <tbody class="table-group-divider">
+                   @for (students of course.students; track $index) {
+                    <tr>
+                        <td>
+                            {{students.identificacion}}
+                        </td>
+                        <td>
+                            {{students.name}}
+                        </td>
+                        <td>
+                            {{students.surName}}
+                        </td>
+                    </tr>
+                   }
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
